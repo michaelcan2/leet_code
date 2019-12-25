@@ -1,0 +1,421 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#Given a sorted array of integers, return the two numbers such that they add up to a specifc target.\n",
+    "#You may assume that each input would have exactly one solution, and you may not use the same element twice."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "d = [-2,1,2,4,7,11]\n",
+    "t = 13"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 15,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "2 11\n",
+      "True\n"
+     ]
+    }
+   ],
+   "source": [
+    "def two_sum_brute_force(data, target):\n",
+    "    ##first for loop is going to be the outer loop that going to loop through each of the numbers in array d\n",
+    "    for i in range(len(d)-1):\n",
+    "        ##and the second for loop is going to go from i+1 all the way to the remaining elements\n",
+    "            ##so for instance when we start  the looop we would start of the first element in the array \n",
+    "    ##(which would be -2 in this case ) and then we want to create the pair by going through the remaining elements\n",
+    "    ##in the array and then creating a pair with -2, so (-2,1)...(-2,2) etc...and then we would progress to the next element\n",
+    "    ##in D (1,2)...(1,4) etc... and as we create these pairs we would check if the sum of those elements equals the target \n",
+    "        for j in range(i+1, len(d)):\n",
+    "            if d[i] + d[j] == target:\n",
+    "                print(d[i], d[j])\n",
+    "                return True\n",
+    "    ##and if it is we return true, and if it cant be achieve its False\n",
+    "    return False\n",
+    "print(two_sum_brute_force(d,t))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "A = [2,4,6]\n",
+    "##its possible to get the target 10 with 4 and 6\n",
+    "target = 10\n",
+    "##so were going to iterate through the numbers of the array A one by pone and see if there present at the hah table\n",
+    "\n",
+    "##we check if 2 is in our hash tables\n",
+    "##we store are taget minus the value that were on aka for now -2 ####on 5:45\n",
+    "####ht[8] is equal to the value at the first position so its equal to 2.\n",
+    "\n",
+    "ht[8] = dit()\n",
+    "\n",
+    "###so i is equal to the first index of our loop\n",
+    "i =0 \n",
+    "##so we continue on through our loop i = 1 were now processing the element in the first index which is 4\n",
+    "##and basically were checking if 4 is present in the dictionary \n",
+    "##so we look at the dictionary and we have 8 but we dont have a 4 \n",
+    "    ##so what we do is the same procedure as before, we say ht[10-4], which will give us six\n",
+    "    ##and thats is going to equal(\"set equal\") to the value stored at the first position which in\n",
+    "    ##this case is four.\n",
+    "    \n",
+    "##so were going to move along in the array now at the last one[2,4,6], which is 6\n",
+    "## and what were going to do is check whether or not this 6 is present in our hash table,\n",
+    "    ###so we look in our hash table first with 8,ht[8] = 2\n",
+    "    ##nope not 8 check the next one and 6, we have a six\n",
+    "    ##and so what we do is update the value for the entry 6 of our hash table  ht[6] = 4\n",
+    "        ##so we know that if we add the value we were processing which was 6, with the value that was stored at this entry of 6, 4\n",
+    "        ##that will sub to the target value, so that will sub for 10.##7:09--that will be the genrral apporach for this hash table\n",
+    "        "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "succeeded in brute force "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "\n",
+    "print(k)\n",
+    "\n",
+    "for i in range(len(k)):\n",
+    "    print(i)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "##better BF lower\n",
+    "def two_sums(k,target):\n",
+    "    results = []\n",
+    "    for i in range(len(k)):\n",
+    "        for j in range(len(k)):\n",
+    "            if i != j and i + j == target:\n",
+    "                ##range prints the indexes but appends the values\n",
+    "                results.append(i)\n",
+    "                results.append(j)\n",
+    "                return results\n",
+    "two_sums(k_l,8)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def twoSum(nums, target):\n",
+    "        result = None\n",
+    "        \n",
+    "        for i in nums:\n",
+    "            for j in nums:\n",
+    "                if  (i != j) and (i + j) == target:\n",
+    "                    result = [i, j]\n",
+    "                else:\n",
+    "                    continue\n",
+    "    \n",
+    "        return result\n",
+    "\n",
+    "twoSum(e,10)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "##range gives the indicies, so your retunr the indicies \n",
+    "\n",
+    "def find_index(nums,tar):\n",
+    "    result = None\n",
+    "    ##looking at indicies now\n",
+    "    for i in range(len(e)):\n",
+    "        for j in range(len(e)):\n",
+    "            ###e[i] is value of indices\n",
+    "            if i != j and e[i] + e[j] == tar:\n",
+    "                result = [i, j]\n",
+    "                return result\n",
+    "    \n",
+    "find_index(e,10)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "\n",
+    "def twoSum (l,target):\n",
+    "    result = None\n",
+    "    for i in range(len(l)):\n",
+    "        for j in range(len(l)):\n",
+    "            if i != j and i + j == target:\n",
+    "                result = [i, j]\n",
+    "                return result\n",
+    "twoSum(e,10)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "class Solution {\n",
+    "    public int[] twoSum(int[] nums, int target) {\n",
+    "        for (int i = 0; i < nums.length; i++) {\n",
+    "            for (int j = i + 1; j < nums.length; j++) {\n",
+    "                if (nums[j] == target - nums[i]) {\n",
+    "                    return new int[] { i, j };\n",
+    "            }\n",
+    "        }\n",
+    "    }\n",
+    "     throw new IllegalArgumentException(\"No two sum solution\");\n",
+    "    }\n",
+    "    \n",
+    "}\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 14,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "nope\n",
+      "nope\n",
+      "nope\n",
+      "nope\n",
+      "nope\n",
+      "nope\n",
+      "nope\n",
+      "nope\n",
+      "nope\n",
+      "nope\n",
+      "nope\n",
+      "nope\n",
+      "nope\n",
+      "nope\n",
+      "nope\n",
+      "nope\n",
+      "nope\n",
+      "nope\n",
+      "nope\n",
+      "nope\n",
+      "nope\n",
+      "nope\n",
+      "nope\n",
+      "nope\n",
+      "nope\n",
+      "nope\n",
+      "nope\n",
+      "nope\n",
+      "nope\n",
+      "nope\n",
+      "nope\n",
+      "nope\n",
+      "nope\n",
+      "nope\n",
+      "nope\n",
+      "nope\n",
+      "nope\n",
+      "nope\n",
+      "nope\n",
+      "nope\n",
+      "nope\n",
+      "nope\n",
+      "nope\n",
+      "nope\n",
+      "nope\n",
+      "nope\n",
+      "nope\n",
+      "nope\n",
+      "nope\n"
+     ]
+    }
+   ],
+   "source": [
+    "##wrong for some lame reason\n",
+    "\n",
+    "e = [3,8,7,4,6,3,2]\n",
+    "def two_Sum (nums,target):\n",
+    "    result = None\n",
+    "    for i in range(len(nums)):\n",
+    "       \n",
+    "        for j in range(len(nums)):\n",
+    "            \n",
+    "            if e[j] == e[i] - target:\n",
+    "                 print('here')\n",
+    "                \n",
+    "            else:\n",
+    "                print('nope')\n",
+    "two_Sum(e,10)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 19,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[0, 2]"
+      ]
+     },
+     "execution_count": 19,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "\n",
+    "def twoSums( nums, target):\n",
+    "    \"\"\"\n",
+    "    :type nums: List[int]\n",
+    "    :type target: int\n",
+    "    :rtype: List[int]\n",
+    "    \"\"\"\n",
+    "    for i,n in enumerate(nums):\n",
+    "        if i < len(nums)-1 and target-n in nums[i+1:]: \n",
+    "            return [i, nums[i+1:].index(target-n)+i+1]  \n",
+    "\n",
+    "twoSums(e,10)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 23,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "0 3\n",
+      "1 8\n",
+      "2 7\n",
+      "3 4\n",
+      "4 6\n",
+      "5 3\n",
+      "6 2\n"
+     ]
+    }
+   ],
+   "source": [
+    "for i, n in enumerate(e):\n",
+    "    print(i,n)\n",
+    "    #print(n)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 24,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "123"
+      ]
+     },
+     "execution_count": 24,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "num = 321\n",
+    "def rev(x):\n",
+    "    if x > 0:\n",
+    "        a =  int(str(x)[::-1])  \n",
+    "        return a\n",
+    "rev(num)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 26,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'123'"
+      ]
+     },
+     "execution_count": 26,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "#You can reverse a string but not an int \n",
+    "str(321)[::-1]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.6.5"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 2
+}
